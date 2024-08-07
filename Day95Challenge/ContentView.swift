@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var dice = [Die(sides: 6), Die(sides: 20), Die(sides: 10)]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            ForEach(dice) { die in
+                DiceView(die: die)
+            }
         }
-        .padding()
+        
+        Text("\(dice.reduce(0) { $0 + $1.number })")
+        
+        Button("Roll") {
+            print("The dice were \(dice.map() { $0.number })")
+            
+            dice = dice.map { Die(sides: $0.sides) }
+            
+            print("The roll was \(dice.map() { $0.number })")
+        }
+        Button("Add dice") {
+            dice.append(Die(sides: 6))
+        }
+        Button("Remove dice") {
+            if dice.isEmpty { return }
+            
+            dice.removeFirst()
+        }
     }
 }
 
