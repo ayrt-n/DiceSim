@@ -5,6 +5,7 @@
 //  Created by Ayrton Parkinson on 2024/08/06.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +14,6 @@ struct Day95ChallengeApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Roll.self)
     }
 }

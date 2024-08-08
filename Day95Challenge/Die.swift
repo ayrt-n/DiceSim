@@ -6,10 +6,10 @@
 //
 
 import Foundation
+import SwiftData
 
-@Observable
+@Model
 class Die: Identifiable {
-    let id: UUID
     let sides: Int
     var number: Int
     
@@ -18,7 +18,6 @@ class Die: Identifiable {
     }
     
     init(sides: Int) {
-        self.id = UUID()
         self.sides = sides
         number = Int.random(in: 1...sides)
     }

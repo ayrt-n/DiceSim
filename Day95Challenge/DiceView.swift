@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DiceView: View {
-    @State private var die: Die
+    @Bindable var die: Die
     
     var body: some View {
         ZStack {
@@ -23,13 +24,13 @@ struct DiceView: View {
             die.roll()
         }
     }
-    
-    init(die: Die) {
-        _die = State(initialValue: die)
-    }
 }
 
 #Preview {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Die.self, configurations: config)
+    
     var d6 = Die(sides: 6)
     return DiceView(die: d6)
+        .modelContainer(for: Die.self)
 }

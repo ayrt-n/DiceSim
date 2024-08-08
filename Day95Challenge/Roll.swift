@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+@Model
 class Roll {
     var dice: [Die]
     
