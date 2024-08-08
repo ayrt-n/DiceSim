@@ -26,6 +26,10 @@ class Dice {
         diceArray.append(die)
     }
     
+    func removeDice(at offsets: IndexSet) {
+        diceArray.remove(atOffsets: offsets)
+    }
+    
     init(diceArray: [Die]) {
         self.diceArray = diceArray
     }

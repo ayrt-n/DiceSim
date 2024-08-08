@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @State private var dice = Dice(diceArray: [Die(sides: 6), Die(sides: 20), Die(sides: 10)])
+    @State private var dice: Dice
     
     var body: some View {
         NavigationStack {
@@ -30,7 +30,18 @@ struct ContentView: View {
                     dice.addDice(die: Die(sides: 6))
                 }
             }
+            .toolbar {
+                NavigationLink() {
+                    EditDiceView(dice: dice)
+                } label: {
+                    Label("Edit dice", systemImage: "dice")
+                }
+            }
         }
+    }
+    
+    init() {
+        _dice = State(initialValue: Dice(diceArray: [Die(sides: 6), Die(sides: 20), Die(sides: 10)]))
     }
 }
 

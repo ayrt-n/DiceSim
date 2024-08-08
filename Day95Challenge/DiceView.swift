@@ -18,6 +18,7 @@ struct DiceView: View {
                 .stroke(.black, lineWidth: 3)
             Text("\(die.number)")
                 .font(.headline)
+                .foregroundStyle(.black)
         }
         .frame(width: 60, height: 60)
     }
