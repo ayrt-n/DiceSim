@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DiceView: View {
-    @Bindable var die: Die
+    var die: Die
     
     var body: some View {
         ZStack {
@@ -20,17 +20,10 @@ struct DiceView: View {
                 .font(.headline)
         }
         .frame(width: 60, height: 60)
-        .onTapGesture {
-            die.roll()
-        }
     }
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Die.self, configurations: config)
-    
-    var d6 = Die(sides: 6)
+    let d6 = Die(sides: 6)
     return DiceView(die: d6)
-        .modelContainer(for: Die.self)
 }

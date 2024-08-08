@@ -6,18 +6,18 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-class Die: Identifiable {
+struct Die: Codable, Identifiable {
+    let id: UUID
     let sides: Int
     var number: Int
     
-    func roll() {
+    mutating func roll() {
         number = Int.random(in: 1...sides)
     }
     
     init(sides: Int) {
+        self.id = UUID()
         self.sides = sides
         number = Int.random(in: 1...sides)
     }

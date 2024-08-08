@@ -10,32 +10,24 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @State private var dice = [Die(sides: 6), Die(sides: 20), Die(sides: 10)]
+    @State private var dice = Dice(diceArray: [Die(sides: 6), Die(sides: 20), Die(sides: 10)])
     
     var body: some View {
         NavigationStack {
             VStack {
                 HStack {
-                    ForEach(dice) { die in
+                    ForEach(dice.diceArray) { die in
                         DiceView(die: die)
                     }
                 }
                 
-                Text("\(dice.reduce(0) { $0 + $1.number })")
+                Text("\(dice.total)")
                 
                 Button("Roll") {
-                    dice = dice.map { Die(sides: $0.sides) }
-                    
-                    let roll = Roll(dice: dice)
-                    modelContext.insert(roll)
+                    dice.rollDice()
                 }
                 Button("Add dice") {
-                    dice.append(Die(sides: 6))
-                }
-                Button("Remove dice") {
-                    if dice.isEmpty { return }
-                    
-                    dice.removeFirst()
+                    dice.addDice(die: Die(sides: 6))
                 }
             }
         }
@@ -44,8 +36,8 @@ struct ContentView: View {
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Roll.self, configurations: config)
+    let container = try! ModelContainer(for: Dice.self, configurations: config)
     
     return ContentView()
-        .modelContainer(for: Roll.self)
+        .modelContainer(for: Dice.self)
 }

@@ -14,6 +14,6 @@ struct Day95ChallengeApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Roll.self)
+        .modelContainer(for: Dice.self)
     }
 }

@@ -13,7 +13,8 @@
 		E84FD28E2C624FFA002E9FD4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84FD28D2C624FFA002E9FD4 /* Preview Assets.xcassets */; };
 		E84FD2AF2C638AC8002E9FD4 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2AE2C638AC8002E9FD4 /* DiceView.swift */; };
 		E84FD2B12C638EBF002E9FD4 /* Die.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B02C638EBF002E9FD4 /* Die.swift */; };
-		E84FD2B32C6398A0002E9FD4 /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B22C6398A0002E9FD4 /* Roll.swift */; };
+		E84FD2B32C6398A0002E9FD4 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B22C6398A0002E9FD4 /* Dice.swift */; };
+		E84FD2B52C64DD89002E9FD4 /* EditDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B42C64DD89002E9FD4 /* EditDiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +25,8 @@
 		E84FD28D2C624FFA002E9FD4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E84FD2AE2C638AC8002E9FD4 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		E84FD2B02C638EBF002E9FD4 /* Die.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Die.swift; sourceTree = "<group>"; };
-		E84FD2B22C6398A0002E9FD4 /* Roll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll.swift; sourceTree = "<group>"; };
+		E84FD2B22C6398A0002E9FD4 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		E84FD2B42C64DD89002E9FD4 /* EditDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,8 @@
 			children = (
 				E84FD2862C624FF9002E9FD4 /* Day95ChallengeApp.swift */,
 				E84FD2882C624FF9002E9FD4 /* ContentView.swift */,
-				E84FD2B22C6398A0002E9FD4 /* Roll.swift */,
+				E84FD2B42C64DD89002E9FD4 /* EditDiceView.swift */,
+				E84FD2B22C6398A0002E9FD4 /* Dice.swift */,
 				E84FD2B02C638EBF002E9FD4 /* Die.swift */,
 				E84FD2AE2C638AC8002E9FD4 /* DiceView.swift */,
 				E84FD28A2C624FFA002E9FD4 /* Assets.xcassets */,
@@ -147,10 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E84FD2892C624FF9002E9FD4 /* ContentView.swift in Sources */,
+				E84FD2B52C64DD89002E9FD4 /* EditDiceView.swift in Sources */,
 				E84FD2AF2C638AC8002E9FD4 /* DiceView.swift in Sources */,
 				E84FD2B12C638EBF002E9FD4 /* Die.swift in Sources */,
 				E84FD2872C624FF9002E9FD4 /* Day95ChallengeApp.swift in Sources */,
-				E84FD2B32C6398A0002E9FD4 /* Roll.swift in Sources */,
+				E84FD2B32C6398A0002E9FD4 /* Dice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
