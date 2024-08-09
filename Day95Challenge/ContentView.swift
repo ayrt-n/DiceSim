@@ -21,14 +21,15 @@ struct ContentView: View {
                     }
                 }
                 
-                Text("\(dice.total)")
+                Text("Roll Total: \(dice.total)")
+                    .font(.headline)
+                    .padding(.vertical)
                 
-                Button("Roll") {
-                    dice.rollDice()
+                Button(action: dice.rollDice) {
+                    Text("Roll Dice")
+                        .frame(width: 150)
                 }
-                Button("Add dice") {
-                    dice.addDice(die: Die(sides: 6))
-                }
+                .buttonStyle(.borderedProminent)
             }
             .toolbar {
                 NavigationLink() {

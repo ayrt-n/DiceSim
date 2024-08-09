@@ -25,7 +25,9 @@ struct EditDiceView: View {
                                     .stroke(.black, lineWidth: 2)
                                     .frame(width: 25, height: 25)
                                 Text("\(die.sides)")
+                                    .foregroundStyle(.black)
                             }
+                            Text("- sided dice")
                         }
                     }
                     .onDelete(perform: dice.removeDice)
