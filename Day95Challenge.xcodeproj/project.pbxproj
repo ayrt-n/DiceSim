@@ -16,6 +16,7 @@
 		E84FD2B32C6398A0002E9FD4 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B22C6398A0002E9FD4 /* Dice.swift */; };
 		E84FD2B52C64DD89002E9FD4 /* EditDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B42C64DD89002E9FD4 /* EditDiceView.swift */; };
 		E84FD2B72C66346F002E9FD4 /* DiceHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B62C66346F002E9FD4 /* DiceHistoryView.swift */; };
+		E84FD2B92C6635EA002E9FD4 /* DiceRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD2B82C6635EA002E9FD4 /* DiceRollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E84FD2B22C6398A0002E9FD4 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		E84FD2B42C64DD89002E9FD4 /* EditDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiceView.swift; sourceTree = "<group>"; };
 		E84FD2B62C66346F002E9FD4 /* DiceHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceHistoryView.swift; sourceTree = "<group>"; };
+		E84FD2B82C6635EA002E9FD4 /* DiceRollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		E84FD27A2C624FF9002E9FD4 = {
 			isa = PBXGroup;
 			children = (
+				E84FD2B82C6635EA002E9FD4 /* DiceRollView.swift */,
 				E84FD2B62C66346F002E9FD4 /* DiceHistoryView.swift */,
 				E84FD2852C624FF9002E9FD4 /* Day95Challenge */,
 				E84FD2842C624FF9002E9FD4 /* Products */,
@@ -158,6 +161,7 @@
 				E84FD2B12C638EBF002E9FD4 /* Die.swift in Sources */,
 				E84FD2872C624FF9002E9FD4 /* Day95ChallengeApp.swift in Sources */,
 				E84FD2B32C6398A0002E9FD4 /* Dice.swift in Sources */,
+				E84FD2B92C6635EA002E9FD4 /* DiceRollView.swift in Sources */,
 				E84FD2B72C66346F002E9FD4 /* DiceHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
