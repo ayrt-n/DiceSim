@@ -37,13 +37,14 @@ struct ContentView: View {
                         .frame(width: 150)
                 }
                 .buttonStyle(.borderedProminent)
+                .disabled(rollingDice)
                 .sensoryFeedback(.selection, trigger: rollingDice)
             }
             .toolbar {
                 NavigationLink() {
                     EditDiceView(dice: dice)
                 } label: {
-                    Label("Edit dice", systemImage: "dice")
+                    Label("Edit", systemImage: "gearshape")
                 }
             }
             .onReceive(timer) { _ in
@@ -53,8 +54,7 @@ struct ContentView: View {
                 diceTime -= 1
                 
                 if diceTime <= 0 {
-                    rollingDice = false
-                    diceTime = 10
+                    resetDiceRoll()
                 }
             }
         }
@@ -67,12 +67,14 @@ struct ContentView: View {
     func rollDice() {
         rollingDice = true
     }
+    
+    func resetDiceRoll() {
+        rollingDice = false
+        diceTime = 10
+    }
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Dice.self, configurations: config)
-    
     return ContentView()
         .modelContainer(for: Dice.self)
 }
