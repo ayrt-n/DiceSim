@@ -37,6 +37,7 @@ struct ContentView: View {
                         .frame(width: 150)
                 }
                 .buttonStyle(.borderedProminent)
+                .sensoryFeedback(.selection, trigger: rollingDice)
             }
             .toolbar {
                 NavigationLink() {
