@@ -57,6 +57,7 @@ struct DiceRollView: View {
                     resetDice()
                 }
             }
+            .navigationTitle("Dice Roller")
         }
     }
 

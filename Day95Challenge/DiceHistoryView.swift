@@ -13,23 +13,26 @@ struct DiceHistoryView: View {
     @Query var diceHistory: [Dice]
     
     var body: some View {
-        List(diceHistory) { roll in
-            VStack(alignment: .leading) {
-                HStack {
-                    ForEach(roll.diceArray) { dice in
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .fill(.white)
-                                .stroke(.black, lineWidth: 2)
-                                .frame(width: 25, height: 25)
-                            Text("\(dice.number)")
-                                .foregroundStyle(.black)
+        NavigationStack {
+            List(diceHistory) { roll in
+                VStack(alignment: .leading) {
+                    HStack {
+                        ForEach(roll.diceArray) { dice in
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(.white)
+                                    .stroke(.black, lineWidth: 2)
+                                    .frame(width: 25, height: 25)
+                                Text("\(dice.number)")
+                                    .foregroundStyle(.black)
+                            }
                         }
                     }
+                    Text("Total: \(roll.total)")
+                        .font(.headline)
                 }
-                Text("Total: \(roll.total)")
-                    .font(.headline)
             }
+            .navigationTitle("Roll History")
         }
     }
 }
