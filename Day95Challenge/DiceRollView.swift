@@ -53,7 +53,8 @@ struct DiceRollView: View {
                 diceTime -= 1
                 
                 if diceTime <= 0 {
-                    resetDiceRoll()
+                    modelContext.insert(dice)
+                    resetDice()
                 }
             }
         }
@@ -67,7 +68,10 @@ struct DiceRollView: View {
         rollingDice = true
     }
     
-    func resetDiceRoll() {
+    func resetDice() {
+        let newDice = Dice(diceArray: dice.diceArray)
+        dice = newDice
+        
         rollingDice = false
         diceTime = 10
     }
